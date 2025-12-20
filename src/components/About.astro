@@ -1,0 +1,40 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
+  <div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-4">
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
+        >
+          About Me
+        </h2>
+        <div
+          class="w-[75px] h-[5px] mt-2 rounded-full"
+          style={`background-color: ${siteConfig.accentColor}`}
+        >
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 space-y-8">
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+          {siteConfig.aboutMe.p1}
+        </p>
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+          {siteConfig.aboutMe.p2}
+        </p>
+
+        <ul class="space-y-3">
+          {siteConfig.aboutMe.bullets.map((bullet) => (
+            <li class="text-lg sm:text-xl md:text-2xl text-gray-700">
+              <strong class="text-gray-900">{bullet.heading}</strong>:{" "}
+              {bullet.text}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
