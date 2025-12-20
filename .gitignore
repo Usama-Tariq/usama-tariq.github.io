@@ -141,3 +141,4 @@ vite.config.ts.timestamp-*
 social icons.zip
 /favicon
 .DS_Store
+.vscode
