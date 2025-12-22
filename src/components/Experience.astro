@@ -22,18 +22,18 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
             <div class="relative">
               {siteConfig.experience.map((exp, index) => (
                 <div class="relative mb-12 last:mb-0">
-                  {/* Timeline dot at top of card */}
+                  <!-- Timeline dot at top of card -->
                   <div
                     class="absolute left-1/2 -top-2 w-4 h-4 bg-white border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300"
                     style={`border-color: ${siteConfig.accentColor}; background-color: ${siteConfig.accentColor}`}
                   />
 
-                  {/* Connecting line below card */}
+                  <!-- Connecting line below card -->
                   {index < siteConfig.experience.length - 1 && (
                     <div class="absolute left-1/2 bottom-0 w-0.5 h-12 bg-gray-300 -translate-x-1/2 translate-y-full z-10" />
                   )}
 
-                  {/* Experience card */}
+                  <!-- Experience card -->
                   <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div>

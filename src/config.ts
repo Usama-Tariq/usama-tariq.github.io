@@ -71,7 +71,6 @@ export const siteConfig = {
         "Docker",
         "AWS Lambda",
         "Lambda@Edge",
-        "Lambda@Edge",
         "CloudFormation",
         "Cognito",
         "CI/CD",
@@ -169,7 +168,7 @@ export const siteConfig = {
       degree: "BS Software Engineering",
       dateRange: "2014 - 2018",
       achievements: [
-        "Software Engineering from PU-CIT, a unique blend of rigorous Computer Science and Infomation Technology skills along with thorough core engineering concepts, makes you capable enough to design comprehensive and efficient solutions to complex real-world problems.",
+        "Software Engineering from PU-CIT, a unique blend of rigorous Computer Science and Information Technology skills along with thorough core engineering concepts, makes you capable enough to design comprehensive and efficient solutions to complex real-world problems.",
         // "Developed strong problem-solving skills through technical coursework",
         // "Gained teamwork experience in collaborative academic projects",
       ],
