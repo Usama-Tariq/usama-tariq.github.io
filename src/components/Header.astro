@@ -11,7 +11,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <nav class="max-w-7xl mx-auto px-8 py-4">
+  <nav class="max-w-7xl mx-auto p-8">
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
@@ -73,9 +73,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
+      header?.classList.add("bg-white/80", "backdrop-blur-sm", "border-b", "border-solid", "border-[#e9e9e9]");
     } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+      header?.classList.remove("bg-white/80", "backdrop-blur-sm", "border-b", "border-solid", "border-[#e9e9e9]");
     }
   });
 </script>
