@@ -142,3 +142,7 @@ social icons.zip
 /favicon
 .DS_Store
 .vscode
+
+# Astro build cache
+.astro/
+
