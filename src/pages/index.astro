@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
@@ -28,14 +29,14 @@ const siteUrl = "https://usamatariq.com";
     <meta property="og:url" content={siteUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <!-- <meta property="og:image" content={new URL("/og-image.png", siteUrl)} /> -->
+    <meta property="og:image" content={new URL("/og-image.png", siteUrl)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={siteUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <!-- <meta property="twitter:image" content={new URL("/og-image.png", siteUrl)} /> -->
+    <meta property="twitter:image" content={new URL("/og-image.png", siteUrl)} />
 
     <link rel="canonical" href={siteUrl} />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -68,6 +69,7 @@ const siteUrl = "https://usamatariq.com";
       <Hero />
       <About />
       <Skills />
+      <Projects />
       <Experience />
       <Education />
       <Cta />
