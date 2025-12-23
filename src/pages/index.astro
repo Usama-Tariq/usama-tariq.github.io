@@ -9,6 +9,20 @@ import Cta from "../components/CTA.astro";
 import Skills from "../components/Skills.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+import "@fontsource/ibm-plex-mono/100.css";
+import "@fontsource/ibm-plex-mono/200.css";
+import "@fontsource/ibm-plex-mono/300.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/600.css";
+import "@fontsource/ibm-plex-mono/700.css";
+import "@fontsource/ibm-plex-mono/100-italic.css";
+import "@fontsource/ibm-plex-mono/200-italic.css";
+import "@fontsource/ibm-plex-mono/300-italic.css";
+import "@fontsource/ibm-plex-mono/400-italic.css";
+import "@fontsource/ibm-plex-mono/500-italic.css";
+import "@fontsource/ibm-plex-mono/600-italic.css";
+import "@fontsource/ibm-plex-mono/700-italic.css";
 
 const description = siteConfig.description.replace(/\s+/g, " ").trim();
 const title = `${siteConfig.name} - ${siteConfig.title}`;
@@ -40,12 +54,6 @@ const siteUrl = "https://usamatariq.com";
     <link rel="canonical" href={siteUrl} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
     <title>{title}</title>
 
     <script type="application/ld+json" set:html={JSON.stringify({
