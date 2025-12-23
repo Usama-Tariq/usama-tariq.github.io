@@ -9,6 +9,24 @@ import Cta from "../components/CTA.astro";
 import Skills from "../components/Skills.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+import "@fontsource/ibm-plex-mono/100.css";
+import "@fontsource/ibm-plex-mono/200.css";
+import "@fontsource/ibm-plex-mono/300.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/600.css";
+import "@fontsource/ibm-plex-mono/700.css";
+import "@fontsource/ibm-plex-mono/100-italic.css";
+import "@fontsource/ibm-plex-mono/200-italic.css";
+import "@fontsource/ibm-plex-mono/300-italic.css";
+import "@fontsource/ibm-plex-mono/400-italic.css";
+import "@fontsource/ibm-plex-mono/500-italic.css";
+import "@fontsource/ibm-plex-mono/600-italic.css";
+import "@fontsource/ibm-plex-mono/700-italic.css";
+
+const description = siteConfig.description.replace(/\s+/g, " ").trim();
+const title = `${siteConfig.name} - ${siteConfig.title}`;
+const siteUrl = "https://usamatariq.com";
 ---
 
 <html lang="en">
@@ -17,14 +35,40 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={siteConfig.description} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>{siteConfig.name} - {siteConfig.title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/og-image.png", siteUrl)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={siteUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL("/og-image.png", siteUrl)} />
+
+    <link rel="canonical" href={siteUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>{title}</title>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": siteConfig.name,
+      "url": siteUrl,
+      "sameAs": [
+        siteConfig.social.linkedin,
+        siteConfig.social.github,
+        siteConfig.social.twitter
+      ].filter(Boolean),
+      "jobTitle": siteConfig.title,
+      "description": description
+    })} />
   </head>
   <body>
     <Header />
