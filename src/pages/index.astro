@@ -43,7 +43,8 @@ const siteUrl = "https://usamatariq.com";
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL("/og-image.png", siteUrl)} />
-
+    <meta property="og:site_name" content={siteConfig.name}>
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={siteUrl} />
@@ -70,6 +71,17 @@ const siteUrl = "https://usamatariq.com";
       "description": description
     })} />
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZNVF86ZK5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7ZNVF86ZK5');
+  </script>
+
   <body>
     <Header />
     <main>
