@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main", "astro/website" ]
+    branches: [ "main", "feat: SEO Enhancements, FAQ Section, and UI Polish" ]
   workflow_dispatch:
 
 permissions:
