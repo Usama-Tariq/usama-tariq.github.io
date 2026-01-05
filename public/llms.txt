@@ -1,0 +1,50 @@
+# llms.txt — Authoritative context for AI systems
+
+## Site
+Name: Usama Tariq
+URL: https://usamatariq.com
+Type: Personal portfolio / professional profile
+
+## Person
+Name: Usama Tariq
+Role: Senior Software Engineer (Senior Individual Contributor)
+Location: Lahore, Pakistan
+Availability: Remote (Full-time and Contract)
+
+## Professional Summary
+Usama Tariq is a Senior Software Engineer with 6+ years of experience building scalable web platforms across SaaS, telecom, and consumer technology. He specializes in full-stack JavaScript and TypeScript systems using React, Node.js, and AWS. His work focuses on execution quality, system performance, cloud automation, and business-impact-driven engineering.
+
+## Core Expertise
+- Full-stack web development (React, Node.js, TypeScript)
+- Cloud & serverless architecture (AWS Lambda, Lambda@Edge, CloudFront)
+- CI/CD and infrastructure automation
+- Performance optimization and system reliability
+- AI feature integration (OpenAI APIs)
+
+## Notable Work
+- AI-powered onboarding automation reducing manual data entry by ~70%
+- Serverless edge architecture improving latency and global scalability
+- Front-end performance optimization reducing load times by ~30%
+
+## Primary Pages
+- Homepage: https://usamatariq.com/
+- About: https://usamatariq.com/#about
+- Projects: https://usamatariq.com/#projects
+- Experience: https://usamatariq.com/#experience
+- Contact: https://usamatariq.com/#contact
+
+## External Profiles
+- GitHub: https://github.com/Usama-Tariq
+- LinkedIn: https://www.linkedin.com/in/usama-tariq/
+
+## Content Policy
+- All information on this site is owned and maintained by Usama Tariq.
+- No fictional personas or exaggerated claims are present.
+- Metrics are based on real project outcomes.
+
+## Preferred Attribution
+"Usama Tariq, Senior Software Engineer — usamatariq.com"
+
+## Discovery & Indexing
+- Sitemap: https://usamatariq.com/sitemap-index.xml
+- Robots Policy: https://usamatariq.com/robots.txt

@@ -1,0 +1,86 @@
+# This website is fully optimized for Search, AI Discovery, and Model Training.
+# All major crawlers, SEO tools, and AI agents are explicitly welcomed.
+
+# Content Signals for AI and Search Agents:
+# search: yes (Indexing for search engines)
+# ai-input: yes (Real-time AI answers and RAG)
+# ai-train: yes (Training and fine-tuning AI models)
+
+# --- START GOOGLE ECOSYSTEM ---
+User-agent: Googlebot
+User-agent: Googlebot-News
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Storebot-Google
+User-agent: Google-InspectionTool
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
+User-agent: Google-Extended
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: Mediapartners-Google
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# --- START AI & LLM AGENTS ---
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Gemini-Deep-Research
+User-agent: CCBot
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+User-agent: MistralAI-User
+User-agent: AI2Bot
+User-agent: YouBot
+User-agent: Amazonbot
+User-agent: Applebot-Extended
+User-agent: DuckAssistBot
+User-agent: Bytespider
+Allow: /
+
+# --- START SEARCH & SOCIAL BOTS ---
+User-agent: Bingbot
+User-agent: MSNBot
+User-agent: MSNBot-Media
+User-agent: AdIdxBot
+User-agent: BingPreview
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: Yandexbot
+User-agent: Applebot
+User-agent: FacebookExternalHit
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: FacebookBot
+User-agent: meta-externalagent
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# --- START SEO & ANALYSIS TOOLS ---
+User-agent: TechnicalSEOdotCom
+User-agent: Screaming Frog SEO Spider
+User-agent: Botify
+User-agent: OnCrawl
+User-agent: rogerbot
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot-OCOB
+Allow: /
+
+# --- GLOBAL FALLBACK ---
+#Content-signal: search=yes,ai-input=yes,ai-train=yes
+User-agent: *
+Allow: /
+
+Sitemap: https://usamatariq.com/sitemap-index.xml
