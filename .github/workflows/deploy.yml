@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main", "feat: SEO Enhancements, FAQ Section, and UI Polish" ]
+    branches: [ "main", "feat/seo-and-content-updates" ]
   workflow_dispatch:
 
 permissions:
