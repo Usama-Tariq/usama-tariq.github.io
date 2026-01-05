@@ -6,6 +6,12 @@ export const siteConfig = {
     \n
     Open to remote full-time and contract opportunities worldwide.`,
   accentColor: "#1d4ed8",
+  location: {
+    city: "Lahore",
+    country: "Pakistan",
+    region: "Punjab",
+    addressValue: "Lahore, Pakistan",
+  },
   social: {
     email: "TariqUsama95@gmail.com",
     linkedin: "https://linkedin.com/in/usama-tariq",
@@ -16,6 +22,24 @@ export const siteConfig = {
     twitter: "https://twitter.com/UsamaTariq95",
     // calendly: "https://calendly.com/usama-tariq/1dd13105",
   },
+  faqs: [
+    {
+      question: "Who is Usama Tariq?",
+      answer: "Usama Tariq is a Senior Software Engineer with over 6 years of experience specializing in React, Node.js, TypeScript, and AWS. He has a track record of building scalable web applications and optimizing cloud infrastructure for global startups.",
+    },
+    {
+      question: "What are Usama Tariq's core technical skills?",
+      answer: "Usama possesses deep expertise in JavaScript, TypeScript, React.js, Node.js, AWS (Lambda, CloudFormation), and DevOps (CI/CD, Docker). He is also proficient in web scraping with Python and Scrapy.",
+    },
+    {
+      question: "What are some of Usama Tariq's key achievements?",
+      answer: "Significant achievements include increasing user engagement by 20% at Penny Canny, reducing deployment times by 25%, and automating complex form completion by 70% using AI integration.",
+    },
+    {
+      question: "Is Usama Tariq available for remote work?",
+      answer: "Yes, Usama is open to remote full-time positions and contract opportunities worldwide, bringing senior-level expertise to distributed teams.",
+    },
+  ],
   aboutMe: {
     p1: "I'm a Senior Software Engineer passionate about building systems that scale and teams that move fast. My expertise lies in React, Node.js, TypeScript, and AWS, and I thrive on turning complex requirements into clean, maintainable, and performant solutions.",
     p2: "Over the past 6 years, I’ve helped global startups and SaaS companies enhance product reliability, automate cloud infrastructure, and deliver frictionless user experiences. My goal is always to balance technical depth with real business impact.",

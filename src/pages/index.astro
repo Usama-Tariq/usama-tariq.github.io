@@ -7,6 +7,7 @@ import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
 import Cta from "../components/CTA.astro";
 import Skills from "../components/Skills.astro";
+import FAQ from "../components/FAQ.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
 import "@fontsource/ibm-plex-mono/100.css";
@@ -59,16 +60,60 @@ const siteUrl = "https://usamatariq.com";
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": siteConfig.name,
-      "url": siteUrl,
-      "sameAs": [
-        siteConfig.social.linkedin,
-        siteConfig.social.github,
-        siteConfig.social.twitter
-      ].filter(Boolean),
-      "jobTitle": siteConfig.title,
-      "description": description
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": `${siteUrl}/#person`,
+          "name": siteConfig.name,
+          "url": siteUrl,
+          "image": new URL("/og-image.png", siteUrl),
+          "sameAs": [
+            siteConfig.social.linkedin,
+            siteConfig.social.github,
+            siteConfig.social.twitter
+          ].filter(Boolean),
+          "jobTitle": siteConfig.title,
+          "description": description,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": siteConfig.location.city,
+            "addressRegion": siteConfig.location.region,
+            "addressCountry": siteConfig.location.country
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "University of The Punjab"
+          },
+          "knowsAbout": [
+            "Software Engineering",
+            "React.js",
+            "Node.js",
+            "TypeScript",
+            "AWS",
+            "Cloud Infrastructure",
+            "Full-Stack Development"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${siteUrl}/#website`,
+          "url": siteUrl,
+          "name": siteConfig.name,
+          "description": description,
+          "publisher": { "@id": `${siteUrl}/#person` }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": siteConfig.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }
+      ]
     })} />
   </head>
 
@@ -90,6 +135,7 @@ const siteUrl = "https://usamatariq.com";
       <Skills />
       <Experience />
       <Education />
+      <FAQ />
       <Cta />
     </main>
     <Footer />

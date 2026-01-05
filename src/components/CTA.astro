@@ -2,31 +2,31 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="cta" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <!-- Calendly inline widget begin -->
-  <div 
-    class="calendly-inline-widget rounded-xl" 
-    data-url="https://calendly.com/usama-tariq/1dd13105?hide_gdpr_banner=1" 
-    style="min-width:320px;height:800px;"></div>
-  <!-- Calendly inline widget end -->
+<section 
+  id="cta" 
+  class="p-8 sm:p-12 md:p-16 lg:p-24"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
+  <div class="bg-black flex flex-col items-center text-center p-8 sm:p-12 md:p-16 lg:p-24 rounded-2xl">
+    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
+      Thinking about your next product milestone?
+    </h2>
+    
+    <p class="max-w-2xl text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+      I work with product teams on high-stakes execution—scaling systems, clarifying architecture, and shipping features that need to work the first time.
+    </p>
+    
+    <a
+      href=""
+      class={`text-white bg-gray-500 p-3 rounded-sm hover:bg-[var(--accent-color)] transition-colors font-medium`}
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/usama-tariq/1dd13105?hide_gdpr_banner=1'}); return false;"
+    >
+      Start a focused conversation
+    </a>
+  </div>
+
+  <!-- Calendly link widget begin -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <!-- Calendly link widget end -->
 </section>
-
-<script>
-  // Lazy load Calendly
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const script = document.createElement("script");
-        script.src = "https://assets.calendly.com/assets/external/widget.js";
-        script.async = true;
-        document.body.appendChild(script);
-        observer.disconnect();
-      }
-    });
-  }, { rootMargin: "200px" });
-
-  const cta = document.getElementById("cta");
-  if (cta) {
-    observer.observe(cta);
-  }
-</script>

@@ -8,10 +8,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 <header
   id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-500 border-b border-transparent"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <nav class="max-w-7xl mx-auto p-8">
+  <nav class="max-w-7xl mx-auto p-8 transition-all duration-500">
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
@@ -70,12 +70,15 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 </header>
 
 <script>
+  const header = document.getElementById("header");
+  
   window.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
     if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm", "border-b", "border-solid", "border-[#e9e9e9]");
+      header?.classList.add("bg-white/80", "backdrop-blur-md", "border-[#e9e9e9]");
+      header?.classList.remove("border-transparent");
     } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm", "border-b", "border-solid", "border-[#e9e9e9]");
+      header?.classList.remove("bg-white/80", "backdrop-blur-md", "border-[#e9e9e9]");
+      header?.classList.add("border-transparent");
     }
   });
 </script>
